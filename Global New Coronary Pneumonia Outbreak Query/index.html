@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<title>Ready Bootstrap Dashboard</title>
+		<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
+		<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i">
+		<link rel="stylesheet" href="assets/css/ready.css">
+		<link rel="stylesheet" href="assets/css/demo.css">
+		<link rel="stylesheet" href="assets/css/self.css">
+	</head>
+	<body>
+		<div class="wrapper">
+			<div class="main-header">
+				<div class="logo-header">
+					<a href="index.html" class="logo">
+						DeadAndLive
+					</a>
+					<button class="navbar-toggler sidenav-toggler ml-auto" type="button" data-toggle="collapse" data-target="collapse"
+					 aria-controls="sidebar" aria-expanded="false" aria-label="Toggle navigation">
+						<span class="navbar-toggler-icon"></span>
+					</button>
+					<button class="topbar-toggler more"><i class="la la-ellipsis-v"></i></button>
+				</div>
+				<nav class="navbar navbar-header navbar-expand-lg">
+					<div class="container-fluid">
+						<form class="navbar-left navbar-form nav-search mr-md-3" action="">
+							<div class="input-group">
+								<input type="text" placeholder="Search ..." class="form-control">
+								<div class="input-group-append">
+									<span class="input-group-text">
+										<i class="la la-search search-icon"></i>
+									</span>
+								</div>
+							</div>
+						</form>
+						<ul class="navbar-nav topbar-nav ml-md-auto align-items-center">
+							<li class="nav-item dropdown hidden-caret">
+								<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+								 aria-haspopup="true" aria-expanded="false">
+									<i class="la la-bell"></i>
+									<span class="notification">1</span>
+								</a>
+								<ul class="dropdown-menu notif-box" aria-labelledby="navbarDropdown">
+									<li>
+										<div class="dropdown-title">历史今日</div>
+										<div class="dropdown-item">
+											<p class="text-danger text-center">
+												前端不能直接调用接口,请等待更新
+											</p>
+										</div>
+									</li>
+								</ul>
+							</li>
+							<li class="nav-item dropdown">
+								<a class="dropdown-toggle profile-pic" data-toggle="dropdown" href="#" aria-expanded="false"> <img src="assets/img/profile.jpg"
+									 alt="user-img" width="36" class="img-circle"><span>DeadAndLive</span></span> </a>
+								<ul class="dropdown-menu dropdown-user">
+									<li>
+										<div class="user-box">
+											<div class="u-img"><img src="assets/img/profile.jpg" alt="user"></div>
+											<div class="u-text">
+												<h4>DeadAndLive</h4>
+												<p class="text-muted">deadandlive@foxmail.com</p><a href="profile.html" class="btn btn-rounded btn-danger btn-sm">
+													个人信息
+												</a>
+											</div>
+										</div>
+									</li>
+									<div class="dropdown-divider"></div>
+									<a class="dropdown-item" href="#"><i class="ti-user"></i> My Profile(等待更新)</a>
+									<a class="dropdown-item" href="#"></i> My Balance(等待更新)</a>
+									<a class="dropdown-item" href="#"><i class="ti-email"></i> Inbox(等待更新)</a>
+									<div class="dropdown-divider"></div>
+									<a class="dropdown-item" href="#"><i class="ti-settings"></i> Account Setting(等待更新)</a>
+									<div class="dropdown-divider"></div>
+									<a class="dropdown-item" href="login.html"><i class="fa fa-power-off"></i>登出</a>
+								</ul>
+								<!-- /.dropdown-user -->
+							</li>
+						</ul>
+					</div>
+				</nav>
+			</div>
+			<div class="sidebar">
+				<div class="scrollbar-inner sidebar-wrapper">
+					<div class="user">
+						<div class="photo">
+							<img src="assets/img/profile.jpg">
+						</div>
+						<div class="info">
+							<a class="" data-toggle="collapse" href="#collapseExample" aria-expanded="true">
+								<span>
+									DeadAndLive
+									<span class="user-level">管理员</span>
+									<span class="caret"></span>
+								</span>
+							</a>
+							<div class="clearfix"></div>
+
+							<div class="collapse in" id="collapseExample" aria-expanded="true" style="">
+								<ul class="nav">
+									<li>
+										<a href="#profile">
+											<span class="link-collapse">我的信息</span>
+										</a>
+									</li>
+									<li>
+										<a href="#edit">
+											<span class="link-collapse">编辑信息</span>
+										</a>
+									</li>
+									<li>
+										<a href="#settings">
+											<span class="link-collapse">设置</span>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<ul class="nav">
+						<li class="nav-item active">
+							<a href="index.html">
+								<i class="la la-medkit"></i>
+								<p>海外疫情</p>
+								<span class="badge badge-count xzqz text-danger"></span>
+							</a>
+						</li>
+						<li class="nav-item update-pro">
+							<button data-toggle="modal" data-target="#modalUpdate">
+								<i class="la la-hand-pointer-o"></i>
+								<p>点击更新</p>
+							</button>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="main-panel">
+				<div class="content">
+					<div class="container-fluid">
+						<h4 class="page-title">新冠肺炎疫情</h4>
+						<p>数据来源：<a href="https://news.qq.com/zt2020/page/feiyan.htm#/global">腾讯</a> </p>
+						<div class="row">
+							<div class="col-md-3">
+								<div class="card card-stats">
+									<div class="card-body ">
+										<div class="row">
+											<div class="col-5">
+												<div class="icon-big text-center text-danger">
+													<i class="la la-ambulance"></i>
+												</div>
+											</div>
+											<div class="col-7 d-flex align-items-center">
+												<div class="numbers">
+													<p class="card-category">今日新增确诊</p>
+													<h4 class="card-title xzqz"></h4>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-3">
+								<div class="card card-stats">
+									<div class="card-body ">
+										<div class="row">
+											<div class="col-5">
+												<div class="icon-big text-center text-warning">
+													<i class="la la-users"></i>
+												</div>
+											</div>
+											<div class="col-7 d-flex align-items-center">
+												<div class="numbers">
+													<p class="card-category">累计确诊</p>
+													<h4 class="card-title" id="ljqz"></h4>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-3">
+								<div class="card card-stats">
+									<div class="card-body">
+										<div class="row">
+											<div class="col-5">
+												<div class="icon-big text-center text-danger">
+													<i class="la la-calendar-times-o"></i>
+												</div>
+											</div>
+											<div class="col-7 d-flex align-items-center">
+												<div class="numbers">
+													<p class="card-category">今日新增死亡</p>
+													<h4 class="card-title" id="xzsw"></h4>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-3">
+								<div class="card card-stats">
+									<div class="card-body ">
+										<div class="row">
+											<div class="col-5">
+												<div class="icon-big text-center">
+													<i class="la la-close"></i>
+												</div>
+											</div>
+											<div class="col-7 d-flex align-items-center">
+												<div class="numbers">
+													<p class="card-category">累计死亡</p>
+													<h4 class="card-title" id="ljsw"></h4>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-12">
+								<div class="card">
+									<div class="card-header">
+										<h4 class="card-title">海外疫情分布详情</h4>
+										<p>累计确诊</p>
+										<div class="row">
+											<div class="col-md-9">
+												<p></p>
+												<div class="card pull-left">
+													<div class="card-body">
+														<div class="color-box col-4 lever-1"></div>
+														<span style="font-size: 10px;" class="text-left">&gt;10W</span>
+													</div>
+												</div>
+												<div class="card pull-left">
+													<div class="card-body">
+														<div class="color-box col-4 lever-2"></div>
+														<span style="font-size: 10px;" class="text-center">&gt;5W</span>
+													</div>
+												</div>
+												<div class="card pull-left">
+													<div class="card-body">
+														<div class="color-box col-4 lever-3"></div>
+														<span style="font-size: 10px;" class="text-center">&gt;3W</span>
+													</div>
+												</div>
+												<div class="card pull-left">
+													<div class="card-body">
+														<div class="color-box col-4 lever-4"></div>
+														<span style="font-size: 10px;" class="text-center">&gt;1W</span>
+													</div>
+												</div>
+												<div class="card pull-left">
+													<div class="card-body">
+														<div class="color-box col-4 lever-5"></div>
+														<span style="font-size: 10px;" class="text-center">&gt;5000</span>
+													</div>
+												</div>
+												<div class="card pull-left">
+													<div class="card-body">
+														<div class="color-box col-4 lever-6"></div>
+														<span style="font-size: 10px;" class="text-center">&gt;3000</span>
+													</div>
+												</div>
+												<div class="card pull-left">
+													<div class="card-body">
+														<div class="color-box col-4 lever-7"></div>
+														<span style="font-size: 10px;" class="text-center">&gt;1000</span>
+													</div>
+												</div>
+												<div class="card pull-left">
+													<div class="card-body">
+														<div class="color-box col-4 lever-8"></div>
+														<span style="font-size: 10px;" class="text-center">&gt;500</span>
+													</div>
+												</div>
+												<div class="card pull-left">
+													<div class="card-body">
+														<div class="color-box col-4 lever-9"></div>
+														<span style="font-size: 10px;" class="text-center">&gt;200</span>
+													</div>
+												</div>
+											</div>
+											<div class="col-md-3 pull-right">
+												<div class="card card-stats card-danger btn-round">
+													<div class="card-body">
+														<div class="row">
+															<div class="col-5">
+																<div class="icon-big text-center text-info">
+																	<i class="la la-university"></i>
+																</div>
+															</div>
+															<div class="col-7 d-flex align-items-center">
+																<div class="numbers">
+																	<p class="card-category">今日新增最多国家</p>
+																	<h4 class="card-title" id="xzgj"></h4>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="card-body">
+										<div class="mapcontainer">
+											<div class="map">
+												<span>Alternative content for the map</span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row row-card-no-pd">
+							<div class="col-md-4">
+								<div class="card">
+									<div class="card-body">
+										<p class="fw-bold mt-1">确诊最国家TOP5</p>
+										<h4><b>No.1</b></h4>
+										<div class="row">
+											<div class="col-12 btn btn-danger btn-full mt-3 mb-3 dead_max">
+												<div class="text-left pull-left qz_max"></div>
+												<div class="text-right">
+													<strong class="qz_max_num"></strong>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="card-footer">
+										<div class="text-muted h6">没有人比我更了解病毒</div>
+										<div class="text-right h6">——川普</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-5">
+								<div class="card">
+									<div class="card-body">
+										<div class="progress-card">
+											<div class="d-flex justify-content-between mb-1">
+												<span class="text-muted">No.2</span>
+												<span class="qz_2"></span>
+												<span class="text-muted fw-bold qz_2_num"></span>
+											</div>
+											<div class="progress mb-2" style="height: 7px;">
+												<div class="progress-bar lever-2 dead_2" role="progressbar" style="width: 90%"></div>
+											</div>
+										</div>
+										<div class="progress-card">
+											<div class="d-flex justify-content-between mb-1">
+												<span class="text-muted">No.3</span>
+												<span class="qz_3"></span>
+												<span class="text-muted fw-bold qz_3_num"></span>
+											</div>
+											<div class="progress mb-2" style="height: 7px;">
+												<div class="progress-bar lever-3 dead_3" role="progressbar" style="width: 80%"></div>
+											</div>
+										</div>
+										<div class="progress-card">
+											<div class="d-flex justify-content-between mb-1">
+												<span class="text-muted">No.4</span>
+												<span class="qz_4"></span>
+												<span class="text-muted fw-bold qz_4_num"></span>
+											</div>
+											<div class="progress mb-2" style="height: 7px;">
+												<div class="progress-bar lever-4 dead_4" role="progressbar" style="width: 70%"></div>
+											</div>
+										</div>
+										<div class="progress-card">
+											<div class="d-flex justify-content-between mb-1">
+												<span class="text-muted">No.5</span>
+												<span class="qz_5"></span>
+												<span class="text-muted fw-bold qz_5_num"></span>
+											</div>
+											<div class="progress mb-2" style="height: 7px;">
+												<div class="progress-bar lever-5 dead_5" role="progressbar" style="width: 60%"></div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-3">
+								<div class="card card-stats">
+									<div class="card-body">
+										<p class="fw-bold mt-1 text-center h3">海外治愈</p>
+										<div class="row">
+											<div class="col-5">
+												<div class="icon-big text-center icon-warning">
+													<i class="la la-pie-chart text-warning"></i>
+												</div>
+											</div>
+											<div class="col-7 d-flex align-items-center">
+												<div class="numbers">
+													<p class="card-category">新增治愈</p>
+													<h4 class="card-title xz_zy"></h4>
+												</div>
+											</div>
+										</div>
+										<hr />
+										<div class="row">
+											<div class="col-5">
+												<div class="icon-big text-center">
+													<i class="la la-heart-o text-primary"></i>
+												</div>
+											</div>
+											<div class="col-7 d-flex align-items-center">
+												<div class="numbers">
+													<p class="card-category">累计治愈</p>
+													<h4 class="card-title lj_zy"></h4>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-4">
+								<div class="card">
+									<div class="card-header">
+										<h4 class="card-title">死亡率最高国家TOP5</h4>
+										<p class="card-category">
+											战火无烟亦鏖战，白衣尽有献身铭 <span class="text-right">——文/王景云（山东）</span> </p>
+									</div>
+									<div class="card-body">
+										<div id="monthlyChart" class="chart chart-pie"></div>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-8 grid-margin stretch-card">
+								<div class="card">
+									<div class="card-body">
+										<h4 class="card-title">海外疫情</h4>
+										<div class="table-responsive">
+											<table class="table table-striped">
+												<thead>
+													<tr>
+														<th>
+															国家地区
+														</th>
+														<th>
+															新增确诊
+														</th>
+														<th>
+															累计确诊
+														</th>
+														<th>
+															现有确诊
+														</th>
+														<th>
+															累计死亡
+														</th>
+														<th>
+															累计治愈
+														</th>
+													</tr>
+												</thead>
+												<tbody id="yq_table">
+												</tbody>
+											</table>
+											<div class="container-fluid">
+												<div class="row text-center">
+													<div class="col-12 btn-info">
+														<button id="yq_n" type="button" class="col-12 btn btn-info" data-container="body"
+														 data-toggle="popover" data-placement="top" data-content="没有更多了">
+															更多
+														</button>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<footer class="footer">
+					<div class="container-fluid">
+						<div class="copyright mx-auto">
+							2020 DeadAndLive <i class="la la-heart heart text-danger"></i> by </div>
+					</div>
+				</footer>
+			</div>
+		</div>
+		</div>
+		<!-- Modal -->
+		<div class="modal fade" id="modalUpdate" tabindex="-1" role="dialog" aria-labelledby="modalUpdatePro" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered" role="document">
+				<div class="modal-content">
+					<div class="modal-header bg-primary">
+						<h6 class="modal-title"><i class="la la-frown-o"></i>开发中...</h6>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body text-center">
+						<p>有任何问题请联系邮箱 <b>deadandlive@foxmail.com</b></p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary mx-auto" data-dismiss="modal">关闭</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script src="assets/js/core/jquery.3.2.1.min.js"></script>
+	<script src="assets/js/plugin/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
+	<script src="assets/js/core/popper.min.js"></script>
+	<script src="assets/js/core/bootstrap.min.js"></script>
+	<script src="assets/js/plugin/chartist/chartist.min.js"></script>
+	<script src="assets/js/plugin/chartist/plugin/chartist-plugin-tooltip.min.js"></script>
+	<script src="assets/js/plugin/bootstrap-notify/bootstrap-notify.min.js"></script>
+	<script src="assets/js/plugin/bootstrap-toggle/bootstrap-toggle.min.js"></script>
+	<script src="assets/js/plugin/jquery-mapael/jquery.mapael.min.js"></script>
+	<script src="assets/js/plugin/jquery-mapael/maps/world_countries.min.js"></script>
+	<script src="assets/js/plugin/chart-circle/circles.min.js"></script>
+	<script src="assets/js/plugin/jquery-scrollbar/jquery.scrollbar.min.js"></script>
+	<script src="assets/js/ready.min.js"></script>
+	<script src="assets/js/demo.js"></script>
+	<script src="assets/js/self.js"></script>
+	<script src="assets/js/today.js"></script>
+</html>

@@ -1,0 +1,37 @@
+.lever-1 {
+	background-color: #bc0404;
+}
+.lever-2 {
+	background-color: #7c0505;
+}
+.lever-3 {
+	background-color: #9e5f5f;
+}
+.lever-4 {
+	background-color: #ff9c00;
+}
+.lever-5 {
+	background-color: #fcab2a;
+}
+.lever-6 {
+	background-color: #febd56;
+}
+.lever-7 {
+	background-color: #ffefb0;
+}
+.lever-8 {
+	background-color: #fff5cb;
+}
+.lever-9 {
+	background-color: #7ed321;
+}
+
+.middle {
+ 
+   float: none;
+ 
+   display: inline-block;
+ 
+   vertical-align: middle;
+ 
+}
