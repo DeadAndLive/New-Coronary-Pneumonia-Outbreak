@@ -11,4 +11,7 @@
 
 目前没有添加国内的数据（中国）
 
+预览地址：
+  https://deadandlive.github.io/New-Coronary-Pneumonia-Outbreak/Global%20New%20Coronary%20Pneumonia%20Outbreak%20Query/index.html
+
 2020.04.20 1:47
