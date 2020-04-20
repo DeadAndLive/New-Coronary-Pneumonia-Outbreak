@@ -9,8 +9,8 @@
 			var xzsw = yq.deadAdd;
 			var ljqz = yq.confirm;
 			var ljsw = yq.dead;
-			$(".xzqz").text(xzqz == 0 ? "今日未更新" : xzqz);
-			$("#xzsw").text(xzsw == 0 ? "今日未更新" : xzsw);
+			$(".xzqz").text(xzqz == 0 ? "未更新" : xzqz);
+			$("#xzsw").text(xzsw == 0 ? "未更新" : xzsw);
 			$("#ljqz").text(ljqz);
 			$("#ljsw").text(ljsw);
 			$(".xz_zy").text(yq.healAdd);
@@ -1985,13 +1985,15 @@
 			var newMax = 0;
 			var datas = data.data;
 			for (i = 0; i < datas.length; i++) {
-				if (datas[i] > newMax) {
-					newMax = datas[i];
+				if (datas[i].confirmAdd > newMax) {
+					newMax = datas[i].confirmAdd;
 					xzgj = datas[i].name;
 				}
 			}
-			$("#xzgj").html(xzgj.length > 0 ? xzgj : "今日未更新" + "<strong class='text-muted'> " + (newMax == 0 ? "" : newMax) +
-				"</strong>");
+			var temp_1 =  xzgj.length > 0 ? xzgj : "未更新";
+			var temp_2 = newMax == 0 ? "未更新" : newMax;
+			console.log(newMax)
+			$("#xzgj").html(temp_1 + "<strong class='text-muted'> " + temp_2 +"</strong>");
 			$(".qz_max").text(datas[0].name);
 			$(".qz_max_num").text(datas[0].confirm);
 			$(".dead_max").attr("title", "死亡" + datas[0].dead);
@@ -2030,7 +2032,7 @@
 			var table = $("#yq_table");
 			var page_data = function(page) {
 				for (i = page; i < page + 10; i++) {
-					$(table).append("<tr><td>" + datas[i].name + "</td><td>" + (datas[i].confirmAdd == 0 ? "今日未更新" : datas[i].confirmAdd) +
+					$(table).append("<tr><td>" + datas[i].name + "</td><td>" + (datas[i].confirmAdd == 0 ? "未更新" : datas[i].confirmAdd) +
 						"</td><td>" + datas[i].confirm + "</td><td>" + datas[i].nowConfirm + "</td><td>" + datas[i].dead +
 						"</td><td>" + datas[i].heal + "</td></tr>")
 				};
